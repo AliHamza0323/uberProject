@@ -1,12 +1,23 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
+export default function App(){
+
+  const Stack = createStackNavigator()
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    
+    <SafeAreaProvider>
+    
+      <HomeScreen/>
+
+    
+    </SafeAreaProvider>
+    
+
   );
 }
 
